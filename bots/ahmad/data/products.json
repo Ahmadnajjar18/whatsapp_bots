@@ -1,0 +1,39 @@
+{
+  "categories": [
+    {
+      "id": "17525864683529k19n0lky",
+      "name": "الهواتف",
+      "icon": "📱"
+    },
+    {
+      "id": "17531717681764n2p1icdw",
+      "name": "الهواتفd",
+      "icon": "📦"
+    },
+    {
+      "id": "1753173816349rmyxpxlym",
+      "name": "ببل",
+      "icon": "📦"
+    }
+  ],
+  "products": [
+    {
+      "id": "1753196103480g6ph935rd",
+      "name": "لا",
+      "category": "17525864683529k19n0lky",
+      "description": "",
+      "price": 90,
+      "currency": "USD",
+      "specifications": []
+    },
+    {
+      "id": "1753196124768xdkfvbexm",
+      "name": "سامسونج",
+      "category": "17525864683529k19n0lky",
+      "description": "",
+      "price": 1000,
+      "currency": "USD",
+      "specifications": []
+    }
+  ]
+}

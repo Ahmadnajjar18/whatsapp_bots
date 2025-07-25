@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لوحة تحكم بوتات واتساب</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🤖</text></svg>">
+</head>
+<body>
+    <div class="container">
+        <header class="dashboard-header">
+            <div class="header-content">
+                <h1>🤖 لوحة تحكم بوتات واتساب</h1>
+                <p>إدارة احترافية لجميع بوتاتك مع التحكم الكامل والبحث المتقدم</p>
+            </div>
+            <div class="header-stats" id="headerStats">
+                <div class="stat-item">
+                    <span class="stat-number" id="totalBots">0</span>
+                    <span class="stat-label">إجمالي البوتات</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" id="onlineBots">0</span>
+                    <span class="stat-label">نشط</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" id="offlineBots">0</span>
+                    <span class="stat-label">متوقف</span>
+                </div>
+            </div>
+        </header>
+
+        <div class="main-content">
+            <div class="controls">
+                <button class="add-bot-btn" onclick="createNewBot()">
+                    <span class="plus-icon">➕</span>
+                    إضافة بوت جديد
+                </button>
+
+                <div class="search-container">
+                    <input 
+                        id="searchInput" 
+                        type="text" 
+                        placeholder="🔍 ابحث عن بوت بالاسم..." 
+                        autocomplete="off"
+                        spellcheck="false"
+                    >
+                    <button id="clearSearch" class="clear-btn" onclick="clearSearch()" style="display: none;">
+                        ✕
+                    </button>
+                </div>
+
+                
+            </div>
+
+            <div id="searchResults" class="search-results" style="display: none;">
+                <span id="resultsCount">0</span> نتيجة بحث
+                <span id="filterInfo"></span>
+            </div>
+
+            <div class="bots-container" id="botsContainer">
+                <div class="empty-state" id="emptyState">
+                    <div class="empty-icon">📱</div>
+                    <h3>لا توجد بوتات حالياً</h3>
+                    <p>اضغط على زر "إضافة بوت جديد" لإنشاء أول بوت لك</p>
+                    <button onclick="createNewBot()" class="btn btn-primary" style="margin-top: 20px;">
+                        ➕ إنشاء بوت الآن
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- شاشة التحميل -->
+        <div class="loading-overlay" id="loadingOverlay">
+            <div class="loading-content">
+                <div class="loading-spinner"></div>
+                <p id="loadingText">جاري إنشاء البوت...</p>
+                <div class="loading-progress">
+                    <div class="progress-bar" id="progressBar"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- إشعارات التوست -->
+        <div id="toastContainer" class="toast-container"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
